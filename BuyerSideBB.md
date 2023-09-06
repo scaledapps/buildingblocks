@@ -1,4 +1,4 @@
-# Platform Building Blocks
+# Buyer Side Building Blocks
 
 ## Objective
 Build domain-agnostic, reusable components for beckn applications, that  can be configured and used across various domains. This requires a flexible and modular architecture, that can adapt to various domains with minimal code changes.
@@ -235,8 +235,4 @@ export default SearchComponent;
 ```
 
 
-# TODO
-## Strapi instance in Cloud / EC2
-## Wrapper on Strapi CMS
-## [Data Model](DataModel.md)
 ## Build and deployment

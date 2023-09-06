@@ -1,4 +1,9 @@
 
+# TODO
+## Strapi instance in Cloud / EC2
+## Wrapper on Strapi CMS
+
+
 # Data Structures
 
 The proposed resource model showing the relationship between data objects that are used by this Building Block is illustrated in the diagram below.
