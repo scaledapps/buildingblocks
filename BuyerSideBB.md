@@ -83,6 +83,71 @@ function SearchComponent({ onSearch }) {
 export default SearchComponent;
 ```
 
+### Sample Code for React Location Component
+![Alt text](image.png)
+```
+import React, { Component } from 'react';
+
+class LocationSelector extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      location: '',
+      selectedLocation: null,
+      autocomplete: null,
+    };
+    this.mapRef = React.createRef();
+    this.inputRef = React.createRef();
+  }
+
+  componentDidMount() {
+    // Load the Google Maps JavaScript API script
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places`;
+    script.async = true;
+    script.onload = this.initAutocomplete;
+    document.head.appendChild(script);
+  }
+
+  initAutocomplete = () => {
+    const autocomplete = new window.google.maps.places.Autocomplete(this.inputRef.current);
+    autocomplete.addListener('place_changed', this.handlePlaceSelect);
+    this.setState({ autocomplete });
+  };
+
+  handlePlaceSelect = () => {
+    const selectedPlace = this.state.autocomplete.getPlace();
+    if (selectedPlace.geometry) {
+      this.setState({ selectedLocation: selectedPlace.geometry.location });
+      // You can use selectedPlace for additional location details if needed
+    }
+  };
+
+  handleLocationChange = (e) => {
+    this.setState({ location: e.target.value });
+  };
+
+  render() {
+    return (
+      <div>
+        <input
+          ref={this.inputRef}
+          type="text"
+          placeholder="Enter your location"
+          value={this.state.location}
+          onChange={this.handleLocationChange}
+        />
+        <div
+          ref={this.mapRef}
+          style={{ width: '100%', height: '300px' }}
+        />
+      </div>
+    );
+  }
+}
+
+export default LocationSelector;
+```
 
 ## Client Layer
 
