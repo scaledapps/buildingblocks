@@ -1,6 +1,10 @@
 # Buyer Side Building Blocks
 
-## Objective
+## Architecture
+
+![architecture](architecture.png)
+
+## Objective for Buyer Side BB
 Build domain-agnostic, reusable components for beckn applications, that  can be configured and used across various domains. This requires a flexible and modular architecture, that can adapt to various domains with minimal code changes.
 
 Each building block can be dynamically enabled or disabled using feature toggles.
@@ -10,6 +14,8 @@ The frontend (UI layer), and the backend-for-frontend (client layer) should be a
 ## User-Interface Layer
 
 ### Technical Building Blocks
+
+![Alt text](image-1.png)
 
 #### User Interface Components
 Design reusable React components that cover common UI elements (e.g., search criteria forms, result displays, configurable forms, paginated grids) and can be easily customized for different domains.
@@ -152,6 +158,8 @@ export default LocationSelector;
 ## Client Layer
 
 ### Technical Building Blocks
+
+![BFF](bff-bb.png)
 
 #### Authentication & Authorization
 This block handles user authentication and authorization to ensure that requests have the necessary entitlements to access the features.
