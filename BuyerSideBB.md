@@ -15,7 +15,7 @@ The frontend (UI layer), and the backend-for-frontend (client layer) should be a
 
 ### Technical Building Blocks
 
-![Alt text](image-1.png)
+![UI BB](ui-bb.png)
 
 #### User Interface Components
 Design reusable React components that cover common UI elements (e.g., search criteria forms, result displays, configurable forms, paginated grids) and can be easily customized for different domains.
