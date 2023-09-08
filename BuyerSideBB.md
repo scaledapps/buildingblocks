@@ -2,7 +2,7 @@
 
 ## Architecture
 
-![architecture](architecture.png)
+![Architecture](architecture.png)
 
 ## Objective for Buyer Side BB
 Build domain-agnostic, reusable components for beckn applications, that  can be configured and used across various domains. This requires a flexible and modular architecture, that can adapt to various domains with minimal code changes.
